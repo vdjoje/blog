@@ -1,0 +1,10 @@
+.forma {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register {
+  margin-top: 50;
+}
