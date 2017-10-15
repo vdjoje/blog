@@ -9,11 +9,6 @@ import MenuIcon from "material-ui-icons/Menu";
 import { Link } from "react-router-dom";
 import Typography from "material-ui/Typography";
 
-const stil = {
-  display: "flex",
-  flexDirection: "column"
-};
-
 const styles = theme => ({
   container: {
     display: "flex",

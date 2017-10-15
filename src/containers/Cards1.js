@@ -7,6 +7,7 @@ import Typography from "material-ui/Typography";
 import IconButton from "material-ui/IconButton";
 import FavoriteIcon from "material-ui-icons/Favorite";
 import ShareIcon from "material-ui-icons/Share";
+import { Link } from "react-router-dom";
 
 const styles = {
   card: {
@@ -27,7 +28,6 @@ function SimpleMediaCard(props) {
     <div className="base">
       <Card
         style={{
-          backgroundImage: "url('https://unsplash.it/200/300/?random')",
           backgroundSize: "cover",
           flex: 1,
           height: null,
@@ -35,8 +35,28 @@ function SimpleMediaCard(props) {
         }}
         className={classes.card}
       >
-        <CardMedia className={classes.media} title="Contemplative Reptile" />
-
+        <CardMedia className={classes.media} title="Contemplative Reptile">
+          <div
+            style={{
+              textAlign: "center"
+            }}
+          >
+            Naslov
+          </div>
+          <div>
+            <p
+              style={{
+                margin: "2%",
+                marginTop: "10%",
+                textAlign: "justify"
+              }}
+            >
+              Tek ste na pocetku upoznavanja sa GitHub-om. Pokusali ste da
+              sacuvate svoj projekat ali bez uspeha. Ne ocajavajte. Ovde mozete
+              nauciti brzo i lako.{" "}
+            </p>
+          </div>
+        </CardMedia>
         <CardActions
           style={{
             background: "rgba(255, 255, 255, 0.9)",
@@ -50,7 +70,15 @@ function SimpleMediaCard(props) {
           <IconButton style={{ float: "right" }} aria-label="Share">
             <ShareIcon />
           </IconButton>
-          <p>ulaz na clanak</p>
+          <Link
+            to="/blog1"
+            style={{
+              color: "black",
+              marginLeft: "20%"
+            }}
+          >
+            <Button>Ulaz na Clanak</Button>
+          </Link>
         </CardActions>
       </Card>
     </div>
